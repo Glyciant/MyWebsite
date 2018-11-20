@@ -1,80 +1,93 @@
-/* Taken from https://getbootstrap.com/docs/4.1/examples/cover/cover.css */
-
-a, a:focus, a:hover {
- color: #fff;
+html {
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
- color: #333;
- text-shadow: none;
- background-color: #fff;
- border: .05rem solid #fff;
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
 
-html, body {
- height: 100%;
- background-color: #333;
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
 }
 
-body {
- display: -ms-flexbox;
- display: flex;
- color: #fff;
- text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
- box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+#header-image {
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/background-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
 }
 
-.cover-container {
- max-width: 42em;
+#header-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.75;
 }
 
-.masthead {
- margin-bottom: 2rem;
+#header-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 30px 100px;
+    padding-right: 10px;
 }
 
-.masthead-brand {
- margin-bottom: 0;
+#header-content>div {
+    padding: 50px;
 }
 
-.nav-masthead .nav-link {
- padding: .25rem 0;
- font-weight: 700;
- color: rgba(255, 255, 255, .5);
- background-color: transparent;
- border-bottom: .25rem solid transparent;
+a:hover {
+    text-decoration: none;
 }
 
-.nav-masthead .nav-link:hover, .nav-masthead .nav-link:focus {
- border-bottom-color: rgba(255, 255, 255, .25);
+.nav-option {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: all 500ms ease-in-out;
 }
 
-.nav-masthead .nav-link + .nav-link {
- margin-left: 1rem;
+.nav-option:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.nav-masthead .active {
- color: #fff;
- border-bottom-color: #fff;
+#header-content-bottom h1 a {
+    color: #FFFFFF;
+    transition: all 500ms ease-in-out;
 }
 
-@media (min-width: 48em) {
- .masthead-brand {
-   float: left;
- }
- .nav-masthead {
-   float: right;
- }
+#header-content-bottom h1:hover a {
+    color: #999999;
 }
 
-.cover {
- padding: 0 1.5rem;
+#header-content-bottom span {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    min-height: 2.5rem;
+    min-width: 2.5rem;
+    padding: 0.5rem;
+    transition: all 250ms ease-in-out;
 }
 
-.cover .btn-lg {
- padding: .75rem 1.25rem;
- font-weight: 700;
+#header-content-bottom span a {
+    color: #000000;
 }
 
-.mastfoot {
- color: rgba(255, 255, 255, .5);
+#header-content-bottom span:hover {
+    background-color: #999999;
 }

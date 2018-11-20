@@ -2,26 +2,49 @@
 
 {% block content %}
 
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">Glyciant</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-      </nav>
+<section id="header">
+  <div id="header-image" style="display: none;"></div>
+  <div id="header-overlay"></div>
+  <div id="header-content" class="text-light">
+    <div id="header-content-top" style="height: 180px; display: none;">
+      <h2><img src="/img/icon.png" style="margin-right: 10px;" /> Glyciant</h2>
     </div>
-  </header>
-
-  <main role="main" class="inner cover">
-    <h1 class="cover-heading">Welcome to my web page!</h1>
-    <p class="lead">It's not finished yet, but there will (probably) be some pretty cool stuff here soon.</p>
-  </main>
-
-  <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Contact me by email at <a href="mailto:GlyciantTTV@outlook.com">GlyciantTTV@outlook.com</a>.</p>
+    <div id="header-content-middle" style="height: calc(100% - 280px); display: none;">
+      <div class="row" style="margin: 0; height: 100%;">
+        <div class="col-10" style="height: 100%;">
+          <div style="position: relative; top: calc(50% - 50px);">
+            <h1 style="font-size: 3.5rem;">Welcome!</h1>
+            <h5>I'm Glyciant, and I make stuff for other people to use.</h5>
+          </div>
+        </div>
+        <div class="col-2" style="height: 100%;">
+          <div style="position: relative; top: calc(50% - 81px);">
+            <a href="#!">
+              <div class="nav-option">
+                About Me
+              </div>
+            </a>
+            <a href="#!">
+              <div class="nav-option">
+                Projects
+              </div>
+            </a>
+            <a href="#!">
+              <div class="nav-option">
+                Contact
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </footer>
-</div>
+    <div id="header-content-bottom" style="height: 50px; display: none;">
+        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://twitch.tv/Glyciant"><i class="fab fa-twitch"></i></a></h1>
+        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://twitter.com/Glyciant"><i class="fab fa-twitter"></i></a></h1>
+        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://reddit.com/user/Heep123"><i class="fab fa-reddit"></i></a></h1>
+        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://github.com/Glyciant"><i class="fab fa-github"></i></a></h1>
+    </div>
+  </div>
+</section>
 
 {% endblock %}
