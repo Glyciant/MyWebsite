@@ -3,6 +3,11 @@ html {
     overflow-x: hidden;
 }
 
+section {
+    height: 100%;
+    width: 100%;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
@@ -74,6 +79,16 @@ a:hover {
     color: #999999;
 }
 
+
+#contact tr a {
+    color: #FFFFFF;
+    transition: all 500ms ease-in-out;
+}
+
+#contact tr:hover a {
+    color: #999999;
+}
+
 #header-content-bottom span {
     background-color: #FFFFFF;
     border-radius: 50%;
@@ -90,4 +105,21 @@ a:hover {
 
 #header-content-bottom span:hover {
     background-color: #999999;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron {
+    background-color: inherit;
+    margin: 0;
+}
+
+tr td:nth-of-type(1) {
+    text-align: center;
+    padding-right: 10px;
 }
