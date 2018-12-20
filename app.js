@@ -1,5 +1,6 @@
 var express = require("express"),
     config = require("./config"),
+    projects = require("./projects.json"),
     bodyParser = require("body-parser"),
     app = express(),
     session = require("express-session"),
@@ -28,6 +29,19 @@ app.get("/", function(req, res) {
 
 app.get("*", function(req, res, next) {
     res.redirect("/");
+});
+
+app.post("/project/", function(req, res, next) {
+    for (var project of projects) {
+        if (project.title == req.body.project) {
+            var found = true;
+            res.render("project_partial", project);
+            break;
+        }
+    }
+    if (!found) {
+        res.sendStatus(404);
+    }
 });
 
 var server = app.listen(config.app.port, function() {

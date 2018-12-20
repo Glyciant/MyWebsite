@@ -51,7 +51,13 @@ $(document).delegate("#nav-top", "click", function() {
     });
 });
 
+var detectScroll = false;
+
 $(document).on("scroll", function() {
+    if (detectScroll === true) {
+        $("#view").slideUp();
+        detectScroll = false;
+    }
     if ($(this).scrollTop() >= $('#about').position().top) {
         $("#nav-top").show("slide", {
             direction: "right"
@@ -63,3 +69,20 @@ $(document).on("scroll", function() {
         }, 200);
     }
 })
+
+$(document).delegate("#project", "click", function() {
+    var project = $(this).data("project");
+    $.post("/project/", {
+        project: project
+    }, function(resp) {
+        $("#view .container").html(resp);
+        $("#view").slideDown(function() {
+            $("body").scrollTo("#view", {
+                duration: 200
+             });
+            setTimeout(function() {
+                detectScroll = true;
+            }, 220);
+        });
+    });
+});
