@@ -1,177 +1,23 @@
-{% extends "../template.html" %}
-
-{% block content %}
-
-<a href="#!" id="nav-top" style="position: fixed; top: 10px; right: 10px; z-index: 100; display: none;" data-toggle="tooltip" data-placement="left" title="Top of Page">
-  <div style="height: 42px; width: 42px; padding: 13px 12px 13px 14px; border-radius: 50%; background-color: #333333; color: #FFFFFF;">
-    <span>
-      <i class="fas fa-chevron-up"></i>
-    </span>
-  </div>  
-</a>
-
-<section id="header">
-  <div id="header-image" style="display: none;"></div>
-  <div id="header-overlay"></div>
-  <div id="header-content" class="text-light">
-    <div id="header-content-top" style="height: 180px; display: none;">
-      <h2 style="margin-top: 4px;"><img src="/img/icon.png" style="margin-right: 10px; position: relative; bottom: 4px;" /> Glyciant</h2>
-    </div>
-    <div id="header-content-middle" style="height: calc(100% - 280px); display: none;">
-      <div class="row" style="margin: 0; height: 100%;">
-        <div class="col-10" style="height: 100%;">
-          <div style="position: relative; top: calc(50% - 50px);">
-            <h1 style="font-size: 3.5rem;">Welcome!</h1>
-            <h5>I'm Glyciant, and I make stuff for other people to use.</h5>
-          </div>
+<html>
+    <head>
+        <title>Thank You</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link rel="icon" href="/img/icon.png" type="image/png" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+        <div id="overlay1" style="display: none;"></div>
+        <div id="overlay2"></div>
+        <div id="content" style="display: none;">
+          <img src="/img/icon.png" />
+          <br />
+          <h1>Thank You</h1>
+          <br />
+          <p>It's time for me to move on. Thank you for all of the good times, everyone!</p>
         </div>
-        <div class="col-2" style="height: 100%;">
-          <div style="position: relative; top: calc(50% - 81px);">
-            <a href="#!" id="nav-about">
-              <div class="nav-option">
-                About Me
-              </div>
-            </a>
-            <a href="#!" id="nav-projects">
-              <div class="nav-option">
-                Projects
-              </div>
-            </a>
-            <a href="#!" id="nav-contact">
-              <div class="nav-option">
-                Contact
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="header-content-bottom" style="height: 50px; display: none;">
-        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://twitch.tv/Glyciant"><i class="fab fa-twitch"></i></a></h1>
-        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://twitter.com/Glyciant"><i class="fab fa-twitter"></i></a></h1>
-        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://reddit.com/user/Heep123"><i class="fab fa-reddit"></i></a></h1>
-        <h1 style="display: inline; margin: 0 10px;"><a target="_blank" href="https://github.com/Glyciant"><i class="fab fa-github"></i></a></h1>
-    </div>
-  </div>
-</section>
-
-<section id="about" style="background-color: #EEEEEE;">
-  <div class="jumbotron vertical-center">
-    <div class="container">
-      <h1 style="font-size: 3.5rem;">About Me</h1>
-      <br />
-      <p>
-        Hey there, I'm Glyciant! You probably know me from around Twitch, Reddit or Discord for some of the moderation work that I do. I have been the lead moderator of /r/Twitch for a few years now and am also the owner of its Discord server. Alongside moderating /r/Twitch, I am also a member of the @TwitchSupport Volunteer team - meaning that I sometimes take the time to help out other users who may be having some basic Twitch troubles.
-      </p>
-      <p>
-        More recently, I have taken on various coding and development projects - and am continuing to build up my portfolio. My most notable projects include this site which you are currently visiting, and also Purple+: a promotion platform for members of the /r/Twitch community. I am now working on more moderation tools for Reddit, Twitch and Discord, as well as ways to engage communities. For more information on my projects, scroll down a little further!
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="projects" style="background-color: #FFFFFF; color: #666666;">
-  <div class="jumbotron vertical-center">
-    <div class="container" style="height: calc(100% - 300px); position: relative; top: -60px;">
-      <h1 style="font-size: 3.5rem;">My Projects</h1>
-      <br />
-      <div id="carousel-projects" class="carousel slide" data-ride="carousel" style="height: 100%; width: 100%;">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/img/projects/glyciant.xyz.png" alt="glyciant.xyz" style="height: 100%; width: 100%; object-fit: cover;">
-            <a href="#!" id="project" data-project="glyciant.xyz">
-              <div style="height: 100%; width: 100%; background-image: -webkit-linear-gradient(0deg, #232526 0%, #414345 100%); position: absolute; top: 0; opacity: 0.9;"></div>
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>glyciant.xyz</h5>
-              <p>My own personal website to introduce myself and show my projects.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/projects/purple+.png" alt="Purple+" style="height: 100%; width: 100%; object-fit: cover;">
-            <a href="#!" id="project" data-project="Purple+">
-              <div style="height: 100%; width: 100%; background-image: -webkit-linear-gradient(0deg, #232526 0%, #414345 100%); position: absolute; top: 0; opacity: 0.9;"></div>
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Purple+</h5>
-              <p>A promotion platform designed to give everyone a chance to be recognised for their uniqueness and achievements.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/projects/pusher.png" alt="Pusher" style="height: 100%; width: 100%; object-fit: cover;">
-            <a href="#!" id="project" data-project="Pusher">
-              <div style="height: 100%; width: 100%; background-image: -webkit-linear-gradient(0deg, #232526 0%, #414345 100%); position: absolute; top: 0; opacity: 0.9;"></div>
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Pusher</h5>
-              <p>A Reddit mod tool that allows subreddit moderators to see new comments and posts as they come in.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="/img/projects/redirects.png" alt="Redirects" style="height: 100%; width: 100%; object-fit: cover;">
-            <a href="#!" id="project" data-project="Redirects">
-              <div style="height: 100%; width: 100%; background-image: -webkit-linear-gradient(0deg, #232526 0%, #414345 100%); position: absolute; top: 0; opacity: 0.9;"></div>
-            </a>
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Redirects</h5>
-              <p>A link redirects system developed for my own personal use.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carousel-projects" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carousel-projects" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="view" style="background-color: #EEEEEE;">
-  <div class="jumbotron vertical-center">
-    <div class="container">
-      
-    </div>
-  </div>
-</section>
-
-<section id="contact" style="background-color: #333333;">
-  <div class="jumbotron vertical-center text-light">
-    <div class="container">
-      <h1 style="font-size: 3.5rem;">Contact</h1>
-      <br />
-      <p>Don't be afraid to get in touch if you need something!</p>
-      <br />
-      <table>
-        <tbody class="text-light">
-          <tr>
-            <td style="padding-bottom: 38px;"><a href="mailto:GlyciantTTV@outlook.com" target="_blank"><h4><i class="fas fa-envelope"></i></h4></a></td>
-            <td style="padding-bottom: 38px;"><a href="mailto:GlyciantTTV@outlook.com" target="_blank"><h4>GlyciantTTV@outlook.com</h4></a></td>
-          </tr>
-          <tr>
-            <td><a href="https://twitch.tv/Glyciant" target="_blank"><h4><i class="fab fa-twitch"></i></h4></a></td>
-            <td><a href="https://twitch.tv/Glyciant" target="_blank"><h4>Glyciant</h4></a></td>
-          </tr>
-          <tr>
-            <td><a href="https://reddit.com/user/Heep123" target="_blank"><h4><i class="fab fa-reddit"></i></h4></a></td>
-            <td><a href="https://reddit.com/user/Heep123" target="_blank"><h4>Heep123</h4></a></td>
-          </tr>
-          <tr>
-            <td><a href="https://twitter.com/Glyciant" target="_blank"><h4><i class="fab fa-twitter"></i></h4></a></td>
-            <td><a href="https://twitter.com/Glyciant" target="_blank"><h4>Glyciant</h4></a></td>
-          </tr>
-          <tr>
-            <td><a href="https://github.com/Glyciant" target="_blank"><h4><i class="fab fa-github"></i></h4></a></td>
-            <td><a href="https://github.com/Glyciant" target="_blank"><h4>Glyciant</h4></a></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-{% endblock %}
+    </body>
+    <script src="/js/site.js"></script>
+</html>
